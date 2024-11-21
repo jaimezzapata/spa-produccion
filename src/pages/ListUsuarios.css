@@ -1,0 +1,208 @@
+/* Contenedor principal del panel */
+.admin-panel {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+/* Barra lateral del menú */
+.admin-panel__sidebar {
+  width: 20%;
+  background-color: #70a1fe;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.admin-panel__sidebar-title {
+  margin-bottom: 20px;
+  color: #417bff;
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+}
+
+.admin-panel__sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 100px;
+}
+
+.admin-panel__sidebar-item {
+  margin: 15px 0;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #eff8ff; /* Fondo inicial */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.admin-panel__sidebar-item:hover {
+  background-color: #70a1fe; /* Cambio de fondo al pasar el mouse */
+  color: white; /* Texto en blanco */
+  transform: translateY(-3px); /* Mueve ligeramente hacia arriba */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
+}
+
+.admin-panel__sidebar-item:active {
+  transform: translateY(1px); /* Efecto de pulsación */
+  background-color: #417bff; /* Fondo más oscuro al hacer clic */
+}
+
+.admin-panel__sidebar-link {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  /* color: white; */
+}
+
+.admin-panel__sidebar-link:hover {
+  color: white;
+}
+
+/* Contenido principal */
+.admin-panel__content {
+  width: 80%;
+  padding: 20px;
+}
+
+.admin-panel__content-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.admin-panel__content-loading {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+.admin-panel__cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta de cita */
+.admin-panel__card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-panel__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.admin-panel__card-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #417bff;
+}
+
+.admin-panel__card-text {
+  margin: 5px 0;
+  color: #555;
+}
+
+.admin-panel__card-status {
+  font-weight: bold;
+  color: #417bff;
+}
+
+.admin-panel__card-actions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Botón Confirmar */
+.admin-panel__button--confirm {
+  background-color: #70a1fe;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.admin-panel__button--confirm:hover {
+  background-color: #417bff;
+  transform: scale(1.05);
+}
+
+.admin-panel__button--confirm:active {
+  background-color: #1845ad;
+  transform: scale(0.95);
+}
+
+/* Botón Cancelar */
+.admin-panel__button--cancel {
+  background-color: #eff8ff;
+  color: #70a1fe;
+  border: 2px solid #70a1fe;
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.admin-panel__button--cancel:hover {
+  background-color: #70a1fe;
+  color: white;
+  transform: scale(1.05);
+}
+
+.admin-panel__button--cancel:active {
+  background-color: #417bff;
+  transform: scale(0.95);
+}
+
+/* Botón Eliminar */
+.admin-panel__button--delete {
+  background-color: #eff8ff;
+  color: #ed4c16;
+  border: 2px solid #e05b09;
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.admin-panel__button--delete:hover {
+  background-color: #70a1fe;
+  color: white;
+  transform: scale(1.05);
+}
+
+.admin-panel__button--delete:active {
+  background-color: #417bff;
+  transform: scale(0.95);
+}
